@@ -6,5 +6,10 @@ pipeline {
                 git url: 'https://github.com/leszko/calculator.git'
             }
         }
+        stage("Compile") {
+            steps {
+                sh "./gradlew compileJava"
+            }
+        }
     }
 }
