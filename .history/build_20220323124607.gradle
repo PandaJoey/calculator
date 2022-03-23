@@ -2,13 +2,11 @@ plugins {
 	id 'org.springframework.boot' version '2.6.4'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
-	id 'jacoco'
 }
 
 group = 'com.leszko'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
-apply plugin: "jacoco"
 
 repositories {
 	mavenCentral()
@@ -21,14 +19,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-jacocoTestCoverageVerification {
-	violationRules {
-		rule {
-			limit {
-				minimum = 0.2
-			}
-		}
-	}
 }
