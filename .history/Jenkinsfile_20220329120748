@@ -38,11 +38,4 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            mail to: 'up623013@myport.ac.uk',
-            subject: "Completed Pipeline: ${currentBuild.fullDisplayName}",
-            body: "Your build completed, please check: ${env.BUILD_URL}"
-        }
-    }
 }

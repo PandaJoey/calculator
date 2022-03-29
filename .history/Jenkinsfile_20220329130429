@@ -40,7 +40,7 @@ pipeline {
     }
     post {
         always {
-            mail to: 'up623013@myport.ac.uk',
+            mail to: 'team@company.com',
             subject: "Completed Pipeline: ${currentBuild.fullDisplayName}",
             body: "Your build completed, please check: ${env.BUILD_URL}"
         }
