@@ -5,9 +5,8 @@ pipeline {
             steps {
                 when{
                     branch 'main'
-                    git url: 'https://github.com/PandaJoey/calculator.git'
                 }
-                
+                git url: 'https://github.com/PandaJoey/calculator.git'
             }
         }
         stage("Compile") {
